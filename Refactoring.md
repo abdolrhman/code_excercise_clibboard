@@ -9,3 +9,14 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+Since the idea was to return this partition key or create a new one
+- I started by adding unit tests to make sure the function works as expected.
+- I used jest to write the tests. I used the `describe` and `it` functions to group the tests. I used the `expect` function to make assertions about the function's output. I used the `toBe` function to make sure the output is equal to the expected value. I used the `toEqual` function to make sure the output is equal to the expected value. I used the `toThrow` function to make sure the function throws an error when the input is invalid.
+- then i wrote comments about this function just to make sure i understand what it does and what it's supposed to do
+- then i started refactoring the function to make it more readable
+- I removed the unnecessary `if` statement
+- I removed the unnecessary `else` statement
+- I removed TRIVIAL_PARTITION_KEY, MAX_PARTITION_KEY_LENGTH unnecessary
+- directly check if event is null or undefined then returns immediately 0
+- using recursion to get the partition key and return it
